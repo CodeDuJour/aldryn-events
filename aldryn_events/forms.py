@@ -6,7 +6,7 @@ from django.conf import settings
 from django.contrib.admin.widgets import AdminSplitDateTime
 from django.core.exceptions import ValidationError
 from django.forms import DateTimeField, TimeField, DateField
-from django.utils.translation import ugettext_lazy as _, ugettext
+from django.utils.translation import gettext_lazy as _, ugettext
 from django.utils import timezone
 from django.utils.html import format_html
 from django.template import TemplateDoesNotExist

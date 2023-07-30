@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils import timezone
 from django.utils.encoding import force_text, python_2_unicode_compatible
-from django.utils.translation import override, ugettext_lazy as _, ugettext
+from django.utils.translation import override, gettext_lazy as _, ugettext
 
 from cms.models import CMSPlugin
 from cms.models.fields import PlaceholderField

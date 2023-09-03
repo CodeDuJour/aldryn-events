@@ -32,6 +32,7 @@ STANDARD = 'standard'
 class Event(TranslatedAutoSlugifyMixin,
             TranslationHelperMixin,
             TranslatableModel):
+    id = models.AutoField(primary_key=True)
 
     slug_source_field_name = 'title'
 
@@ -230,6 +231,8 @@ class Event(TranslatedAutoSlugifyMixin,
 
 class EventCoordinator(models.Model):
 
+    id = models.AutoField(primary_key=True)
+
     name = models.CharField(max_length=200, blank=True)
     email = models.EmailField(max_length=80, blank=True)
     user = models.OneToOneField(
@@ -274,6 +277,8 @@ class Registration(models.Model):
         ('SALUTATION_FEMALE', 'mrs', gettext('Ms.')),
         ('SALUTATION_MALE', 'mr', gettext('Mr.')),
     )
+
+    id = models.AutoField(primary_key=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)

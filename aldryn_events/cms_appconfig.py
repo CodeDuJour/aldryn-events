@@ -11,6 +11,8 @@ from parler.models import TranslatableModel, TranslatedFields
 
 
 class EventsConfig(TranslatableModel, AppHookConfig):
+
+    id = models.AutoField(primary_key=True)
     """Adds some translatable, per-app-instance fields."""
     translations = TranslatedFields(
         app_title=models.CharField(
